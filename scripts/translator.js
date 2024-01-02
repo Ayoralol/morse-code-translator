@@ -2,17 +2,22 @@ import {morseToEng} from "./morsetoeng.js";
 import {engToMorse} from "./engtomorse.js";
 import {langCheck} from "./langcheck.js";
 
-const form = document.querySelector(".input");
-const input = document.querySelector("#translate");
-const output = document.querySelector(".output");
+const input = document.querySelector(".translate");
+const outputs = document.querySelectorAll(".output");
+const normOutput = document.querySelector(".output__norm");
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  if (langCheck(input.value) === "English") {
-    output.innerHTML = engToMorse(input.value);
-  } else if (langCheck(input.value) === "Morse") {
-    output.innerHTML = morseToEng(input.value);
+input.addEventListener("input", () => {
+  const inputValue = input.value.trim();
+  normOutput.value = inputValue;
+  let outputValue = "";
+  if (!inputValue) {
+    outputValue = "";
+  } else if (langCheck(inputValue) === "English") {
+    outputValue = engToMorse(inputValue);
+  } else if (langCheck(inputValue) === "Morse") {
+    outputValue = morseToEng(inputValue);
   } else {
-    output.innerHTML = "Invalid Input";
+    outputValue = "Invalid Input";
   }
+  outputs.forEach((output) => (output.innerHTML = outputValue));
 });
