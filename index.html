@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./scripts/translator.js" defer type="module"></script>
     <title>Morse Code Translator</title>
   </head>
-  <body></body>
+  <body>
+    <form class="input">
+      <label for="translate">Enter Text:</label>
+      <input type="text" id="translate" name="translate" />
+      <input type="submit" value="Translate" />
+    </form>
+    <div class="output"></div>
+  </body>
 </html>
