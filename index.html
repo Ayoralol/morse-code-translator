@@ -9,38 +9,50 @@
   </head>
   <body>
     <div class="wrapper">
-      <section class="edge">
-        <div class="edge__head">
-          <h2 class="edge__head--text">Eng to Morse</h2>
-          <h2 class="flipped">Eng to Morse</h2>
+      <section class="top">
+        <div class="top__left">
+          <div class="top__left--head">
+            <h2 class="top__left--head-text">Eng to Morse</h2>
+          </div>
+          <div class="top__left--par">
+            <p class="top__left--par-text">
+              This is a translator for English into Morse Code or Morse Code
+              into English
+            </p>
+          </div>
+          <div class="top__left--foot">
+            <p class="top__left--foot-text">Made 02-01 2024</p>
+          </div>
         </div>
-        <div class="edge__par">
-          <p class="edge__par--text">
-            This is a translator for English into Morse Code or Morse Code into
-            English
-          </p>
-          <p class="flipped">
-            This is a translator for English into Morse Code or Morse Code into
-            English
-          </p>
-        </div>
-        <div class="edge__foot">
-          <p class="edge__foot--text">Made 02-01 2024</p>
-          <p class="flipped">Made 02-01 2024</p>
+        <div class="top__right">
+          <p class="top__right__text">Enter English or Morse Code</p>
+          <input type="text" class="top__right__input translate" />
+          <div class="top__right__output output"></div>
         </div>
       </section>
-      <section class="main">
-        <p class="main__text">Enter English or Morse Code</p>
-        <input type="text" class="main__input translate" />
-        <div class="main__output output"></div>
-        <div class="main__mid"></div>
-        <div class="m__flipped main__output output"></div>
-        <input
-          type="text"
-          class="m__flipped main__input output__norm"
-          disabled />
-        <p class="m__flipped main__text">Enter English or Morse Code</p>
-      </section>
+      <div class="divider"></div>
+      <section class="bot">
+        <div class="bot__left">
+          <div class="top__left--foot">
+            <p class="top__left--foot-text">Made 02-01 2024</p>
+          </div>
+            <div class="top__left--par">
+              <p class="top__left--par-text">
+                This is a translator for English into Morse Code or Morse Code
+                into English
+              </p>
+            </div>
+            <div class="top__left--head">
+              <h2 class="top__left--head-text">Eng to Morse</h2>
+            </div>
+          </div>
+          <div class="bot__right">
+            <p class="top__right__text">Enter English or Morse Code</p>
+          <input type="text" class="top__right__input output__norm" />
+          <div class="top__right__output output"></div>
+          </div>
+        </section>
+      </div>
     </div>
   </body>
 </html>

@@ -6,7 +6,7 @@ export const langCheck = (str) => {
   }
 
   let isEng = /^[A-Z0-9 ]+$/i.test(str);
-  let isMorse = /^([.-]+\s)*[.-]+(\s\s)*([.-]+\s)*[.-]*$/g.test(str);
+  let isMorse = /^([.-]+\s)*[.-]+((\s\s)*([.-]+\s)*[.-]*)*$/g.test(str);
 
   if (isEng) {
     return "English";
