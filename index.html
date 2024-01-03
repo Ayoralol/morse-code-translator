@@ -3,7 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./scripts/translator.js" defer type="module"></script>
+    <script src="./scripts/magicbutton.js" defer type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
     <title>Morse Code Translator</title>
   </head>
-  <body></body>
+  <body>
+    <div class="wrapper">
+      <section class="top">
+        <div class="top__left">
+          <div class="magic__button magic__btn changer">
+            <p class="magic__button--text changer">Magic</p>
+          </div>
+          <div class="top__left__head">
+            <p class="top__left__head__text changer engormorse">English or Morse</p>
+          </div>
+          <div class="top__left__par">
+            <p class="top__left__par__text changer desc">
+              This is a translator for English into Morse Code or Morse Code
+              into English
+            </p>
+          </div>
+          <div class="top__left__foot">
+            <p class="top__left__foot__text changer foot">Currently only supports A-Z, 0-9</p>
+          </div>
+        </div>
+        <div class="top__right">
+          <p class="top__right__text changer label">Enter English or Morse Code</p>
+          <input type="text" class="top__right__input translate changer" />
+          <div class="top__right__output output changer"></div>
+        </div>
+      </section>
+      <div class="divider"></div>
+      <section class="bot">
+        <div class="bot__left">
+          <div class="magic__button magic__button--flip changer">
+            <p class="magic__button--text changer">Magic</p>
+          </div>
+          <div class="bot__left__foot">
+            <p class="bot__left__foot__text changer foot">Currently only supports A-Z, 0-9</p>
+          </div>
+            <div class="bot__left__par">
+              <p class="bot__left__par__text changer desc">
+                This is a translator for English into Morse Code or Morse Code
+                into English
+              </p>
+            </div>
+            <div class="bot__left__head">
+              <p class="bot__left__head__text changer engormorse">English or Morse</p>
+            </div>
+          </div>
+          <div class="bot__right">
+            <p class="bot__right__text changer label">Enter English or Morse Code</p>
+          <input type="text" class="bot__right__input output__norm changer" disabled/>
+          <div class="bot__right__output output changer"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
 </html>
