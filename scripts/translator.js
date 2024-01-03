@@ -7,6 +7,10 @@ const outputs = document.querySelectorAll(".output");
 const normOutput = document.querySelector(".output__norm");
 
 input.addEventListener("input", () => {
+  translatorFunction();
+});
+
+export const translatorFunction = () => {
   const inputValue = input.value.trim();
   normOutput.value = inputValue;
   let outputValue = "";
@@ -20,4 +24,4 @@ input.addEventListener("input", () => {
     outputValue = "Invalid Input";
   }
   outputs.forEach((output) => (output.innerHTML = outputValue));
-});
+};
