@@ -99,6 +99,7 @@ body {
   height: 40vh;
   filter: blur(2px);
   @include sectionStyles;
+  pointer-events: none;
   &__left {
     &__foot {
       transform: rotatex(180deg);
