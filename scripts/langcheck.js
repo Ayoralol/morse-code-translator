@@ -9,7 +9,7 @@ export const langCheck = (str) => {
   let isMorse = /^[.\- ]$/i.test(str[0]);
 
   if (isEng) {
-    if (/[^A-Z0-9 ,?'!/()&:;=+_"$@¿¡]+/i.test(str)) {
+    if (/[^A-Z0-9 ,?'!/()&:;=+_"$@¿¡.-]+/i.test(str)) {
       return "Invalid Character";
     }
     return "English";

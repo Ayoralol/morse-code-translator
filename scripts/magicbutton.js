@@ -7,10 +7,12 @@ const desc = document.querySelectorAll(".desc");
 const foot = document.querySelectorAll(".foot");
 const foot2 = document.querySelectorAll(".foot2");
 const label = document.querySelectorAll(".label");
-const btnText = document.querySelectorAll(".magic__button--text");
+const btnText = document.querySelectorAll(".magic--text");
+const legText = document.querySelectorAll(".legend--text");
 const input = document.querySelector(".translate");
 const outputs = document.querySelectorAll(".output");
 const normOutput = document.querySelector(".output__norm");
+const mainOutput = document.querySelector(".main__output");
 
 btn.addEventListener("click", () => {
   btn.classList.toggle("active");
@@ -58,6 +60,9 @@ const changeToMorse = () => {
         ". -. - . .-. / . -. --. .-.. .. ... .... / --- .-. / -- --- .-. ... . / -.-. --- -.. .")
   );
   btnText.forEach((html) => (html.innerHTML = "-- .- --. .. -.-."));
+  legText.forEach(
+    (html) => (html.innerHTML = "-- --- .-. ... . / .-.. . --. . -. -..")
+  );
 };
 
 const changeToEnglish = () => {
@@ -77,10 +82,15 @@ const changeToEnglish = () => {
   );
   label.forEach((html) => (html.innerHTML = "Enter English or Morse Code"));
   btnText.forEach((html) => (html.innerHTML = "Magic"));
+  legText.forEach((html) => (html.innerHTML = "Morse Legend"));
 };
 
 const swapInput = () => {
-  let firstOutputValue = outputs[0].innerHTML.replace(/&nbsp;/g, " ");
+  let firstOutputValue = mainOutput.innerHTML;
+  let swapInput = input.value;
+  console.log(firstOutputValue);
+  console.log(swapInput);
   input.value = firstOutputValue;
-  translatorFunction();
+  console.log(input.value);
+  translatorFunction(firstOutputValue);
 };
