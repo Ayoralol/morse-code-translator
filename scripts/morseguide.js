@@ -57,6 +57,7 @@ export const morseCode = {
   "@": ".--.-.",
   "¿": "..-.-",
   "¡": "--...-",
+  " ": "/",
 };
 
 export const morseCodeReverse = {
@@ -116,4 +117,5 @@ export const morseCodeReverse = {
   ".--.-.": "@",
   "..-.-": "¿",
   "--...-": "¡",
+  "/": " ",
 };

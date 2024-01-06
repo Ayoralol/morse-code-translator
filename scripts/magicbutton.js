@@ -5,6 +5,7 @@ const swaps = document.querySelectorAll(".changer");
 const engOrMorse = document.querySelectorAll(".engormorse");
 const desc = document.querySelectorAll(".desc");
 const foot = document.querySelectorAll(".foot");
+const foot2 = document.querySelectorAll(".foot2");
 const label = document.querySelectorAll(".label");
 const btnText = document.querySelectorAll(".magic__button--text");
 const input = document.querySelector(".translate");
@@ -34,23 +35,27 @@ const htmlSwapper = () => {
 const changeToMorse = () => {
   engOrMorse.forEach(
     (html) =>
-      (html.innerHTML =
-        ". -. --. .-.. .. ... ....&nbsp;&nbsp;--- .-.&nbsp;&nbsp;-- --- .-. ... .")
+      (html.innerHTML = ". -. --. .-.. .. ... .... /--- .-. / -- --- .-. ... .")
   );
   desc.forEach(
     (html) =>
       (html.innerHTML =
-        "- .... .. ...&nbsp;&nbsp;.. ...&nbsp;&nbsp;.-&nbsp;&nbsp;- .-. .- -. ... .-.. .- - --- .-.&nbsp;&nbsp;..-. --- .-.&nbsp;&nbsp;. -. --. .-.. .. ... ....&nbsp;&nbsp;.. -. - ---&nbsp;&nbsp;-- --- .-. ... .&nbsp;&nbsp;-.-. --- -.. .&nbsp;&nbsp;--- .-.&nbsp;&nbsp;-- --- .-. ... .&nbsp;&nbsp;-.-. --- -.. .&nbsp;&nbsp;.. -. - ---&nbsp;&nbsp;. -. --. .-.. .. ... ....")
+        "- .... .. ... / .. ... / .- / - .-. .- -. ... .-.. .- - --- .-. / ..-. --- .-. / . -. --. .-.. .. ... .... / .. -. - --- / -- --- .-. ...  / ;-.-. --- -.. . / --- .-. / -- --- .-. ... . / -.-. --- -.. . / .. -. - --- / . -. --. .-.. .. ... ....")
   );
   foot.forEach(
     (html) =>
       (html.innerHTML =
-        "-.-. ..- .-. .-. . -. - .-.. -.--&nbsp;&nbsp;--- -. .-.. -.--&nbsp;&nbsp;... ..- .--. .--. --- .-. - ...&nbsp;&nbsp;.-&nbsp;&nbsp;- ---&nbsp;&nbsp;--..&nbsp;&nbsp;--- .-.&nbsp;&nbsp;-----&nbsp;&nbsp;- ---&nbsp;&nbsp;----.")
+        "-.-. ..- .-. .-. . -. - .-.. -.-- / ... ..- .--. .--. --- .-. - ... / .- .-.. .-.. / -- --- .-. ... . / -.-. --- -.. . / -.-. .... .- .-. .- -.-. - . .-. ...")
+  );
+  foot2.forEach(
+    (html) =>
+      (html.innerHTML =
+        ". -. --. .-.. .. ... .... / -- ..- ... - / ... - .- .-. - / .-- .. - .... / .- / .-.. . - - . .-. / --- .-. / -. ..- -- -... . .-. --..--- / -- --- .-. ... . / -- ..- ... - / ... - .- .-. - / .-- .. - .... / .- / .-.-.- / --- .-. / -....-")
   );
   label.forEach(
     (html) =>
       (html.innerHTML =
-        ". -. - . .-.&nbsp;&nbsp;. -. --. .-.. .. ... ....&nbsp;&nbsp;--- .-.&nbsp;&nbsp;-- --- .-. ... .&nbsp;&nbsp;-.-. --- -.. .")
+        ". -. - . .-. / . -. --. .-.. .. ... .... / --- .-. / -- --- .-. ... . / -.-. --- -.. .")
   );
   btnText.forEach((html) => (html.innerHTML = "-- .- --. .. -.-."));
 };
@@ -62,7 +67,14 @@ const changeToEnglish = () => {
       (html.innerHTML =
         "This is a translator for English into Morse Code or Morse Code into English")
   );
-  foot.forEach((html) => (html.innerHTML = "Currently only supports A-Z, 0-9"));
+  foot.forEach(
+    (html) => (html.innerHTML = "Currently supports all morse code characters")
+  );
+  foot2.forEach(
+    (html) =>
+      (html.innerHTML =
+        "English must start with a letter or number, Morse must start with a . or -")
+  );
   label.forEach((html) => (html.innerHTML = "Enter English or Morse Code"));
   btnText.forEach((html) => (html.innerHTML = "Magic"));
 };

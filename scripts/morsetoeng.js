@@ -3,7 +3,7 @@
 import {morseCodeReverse} from "./morseguide.js";
 
 export const morseToEng = (morseCode) => {
-  const words = morseCode.split("  ");
+  const words = morseCode.split(" / ");
   const strArr = words.map((word) => {
     const letters = word.split(" ");
     const translatedLetters = letters.map((char) => {

@@ -77,6 +77,7 @@ body {
   border-radius: 5px;
   border: 2px dashed rgba(80, 80, 80, 0.7);
   color: white;
+  padding: 4px;
 }
 .wrapper .top__right__output {
   margin: 8px;
@@ -136,6 +137,7 @@ body {
   border-radius: 5px;
   border: 2px dashed rgba(80, 80, 80, 0.7);
   color: white;
+  padding: 4px;
 }
 .bot__right__output {
   margin: 8px;

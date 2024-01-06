@@ -7,11 +7,12 @@ const outputs = document.querySelectorAll(".output");
 const normOutput = document.querySelector(".output__norm");
 
 input.addEventListener("input", () => {
-  translatorFunction();
+  const inputValue = input.value;
+  translatorFunction(inputValue);
 });
 
-export const translatorFunction = () => {
-  const inputValue = input.value.trim();
+export const translatorFunction = (value) => {
+  let inputValue = value.trim();
   normOutput.value = inputValue;
   let outputValue = "";
   if (!inputValue) {
@@ -21,7 +22,7 @@ export const translatorFunction = () => {
   } else if (langCheck(inputValue) === "Morse") {
     outputValue = morseToEng(inputValue);
   } else {
-    outputValue = "Invalid Input";
+    outputValue = langCheck(inputValue);
   }
   outputs.forEach((output) => (output.innerHTML = outputValue));
 };
