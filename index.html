@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./scripts/translator.js" defer type="module"></script>
     <script src="./scripts/magicbutton.js" defer type="module"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+    <script src="./scripts/legenddialog.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
     <title>Morse Code Translator</title>
   </head>
@@ -15,11 +18,10 @@
     <div class="wrapper">
       <section class="top">
         <div class="top__left">
-          <div class="magic__button magic__btn changer">
-            <p class="magic__button--text changer">Magic</p>
-          </div>
           <div class="top__left__head">
-            <p class="top__left__head__text changer engormorse">English or Morse</p>
+            <p class="top__left__head__text changer engormorse">
+              English or Morse
+            </p>
           </div>
           <div class="top__left__par">
             <p class="top__left__par__text changer desc">
@@ -28,41 +30,150 @@
             </p>
           </div>
           <div class="top__left__foot">
-            <p class="top__left__foot__text changer foot">Currently only supports A-Z, 0-9</p>
+            <p class="top__left__foot__text changer foot">
+              Currently supports all morse code characters
+            </p>
+            <p class="top__left__foot__text changer foot2">
+              Start Morse with a . or - and start English with any other valid
+              Morse character
+            </p>
+          </div>
+          <div class="top__left__buttons changer">
+            <div class="top__left__buttons__magic magic__btn changer">
+              <p class="top__left__buttons__magic--text changer magic--text">
+                Magic
+              </p>
+            </div>
+            <div class="top__left__buttons__legend legend__btn changer">
+              <p class="top__left__buttons__legend--text legend--text changer">
+                Morse Legend
+              </p>
+            </div>
           </div>
         </div>
         <div class="top__right">
-          <p class="top__right__text changer label">Enter English or Morse Code</p>
+          <p class="top__right__text changer label">
+            Enter English or Morse Code
+          </p>
           <input type="text" class="top__right__input translate changer" />
-          <div class="top__right__output output changer"></div>
+          <div class="top__right__output output main__output changer"></div>
         </div>
       </section>
       <div class="divider"></div>
       <section class="bot">
         <div class="bot__left">
-          <div class="magic__button magic__button--flip changer">
-            <p class="magic__button--text changer">Magic</p>
-          </div>
-          <div class="bot__left__foot">
-            <p class="bot__left__foot__text changer foot">Currently only supports A-Z, 0-9</p>
-          </div>
-            <div class="bot__left__par">
-              <p class="bot__left__par__text changer desc">
-                This is a translator for English into Morse Code or Morse Code
-                into English
+          <div class="bot__left__buttons changer">
+            <div class="bot__left__buttons__magic magic__btn changer">
+              <p class="bot__left__buttons__magic--text changer magic--text">
+                Magic
               </p>
             </div>
-            <div class="bot__left__head">
-              <p class="bot__left__head__text changer engormorse">English or Morse</p>
+            <div class="bot__left__buttons__legend legend__btn changer">
+              <p class="bot__left__buttons__legend--text legend--text changer">
+                Morse Legend
+              </p>
             </div>
           </div>
-          <div class="bot__right">
-            <p class="bot__right__text changer label">Enter English or Morse Code</p>
-          <input type="text" class="bot__right__input output__norm changer" disabled/>
-          <div class="bot__right__output output changer"></div>
+          <div class="bot__left__foot">
+            <p class="bot__left__foot__text changer foot">
+              Currently supports all morse code characters
+            </p>
+            <p class="bot__left__foot__text changer foot2">
+              Start Morse with a . or - and start English with any other valid
+              Morse character
+            </p>
           </div>
-        </section>
-      </div>
+          <div class="bot__left__par">
+            <p class="bot__left__par__text changer desc">
+              This is a translator for English into Morse Code or Morse Code
+              into English
+            </p>
+          </div>
+          <div class="bot__left__head">
+            <p class="bot__left__head__text changer engormorse">
+              English or Morse
+            </p>
+          </div>
+        </div>
+        <div class="bot__right">
+          <p class="bot__right__text changer label">
+            Enter English or Morse Code
+          </p>
+          <input
+            type="text"
+            class="bot__right__input output__norm changer"
+            disabled />
+          <div class="bot__right__output output changer"></div>
+        </div>
+      </section>
     </div>
+    <dialog class="legend-dialog">
+      <div class="legend-dialog__head">
+        <p class="legend-dialog__head--text">Valid Morse Code Characters</p>
+      </div>
+      <div class="legend-dialog__wrap">
+        <div class="legend-dialog__left">
+          <p class="legend-dialog__left--text">A = .-</p>
+          <p class="legend-dialog__left--text">B = -...</p>
+          <p class="legend-dialog__left--text">C = -.-.</p>
+          <p class="legend-dialog__left--text">D = -..</p>
+          <p class="legend-dialog__left--text">E = .</p>
+          <p class="legend-dialog__left--text">F = ..-.</p>
+          <p class="legend-dialog__left--text">G = --.</p>
+          <p class="legend-dialog__left--text">H = ....</p>
+          <p class="legend-dialog__left--text">I = ..</p>
+          <p class="legend-dialog__left--text">J = .---</p>
+          <p class="legend-dialog__left--text">K = -.-</p>
+          <p class="legend-dialog__left--text">L = .-..</p>
+          <p class="legend-dialog__left--text">M = --</p>
+          <p class="legend-dialog__left--text">N = -.</p>
+          <p class="legend-dialog__left--text">O = ---</p>
+          <p class="legend-dialog__left--text">P = .--.</p>
+          <p class="legend-dialog__left--text">Q = --.-</p>
+          <p class="legend-dialog__left--text">R = .-.</p>
+          <p class="legend-dialog__left--text">S = ...</p>
+          <p class="legend-dialog__left--text">T = -</p>
+          <p class="legend-dialog__left--text">U = ..-</p>
+          <p class="legend-dialog__left--text">V = ...-</p>
+          <p class="legend-dialog__left--text">W = .--</p>
+          <p class="legend-dialog__left--text">X = -..-</p>
+          <p class="legend-dialog__left--text">Y = -.--</p>
+          <p class="legend-dialog__left--text">Z = --..</p>
+          <p class="legend-dialog__left--text">1 = .----</p>
+          <p class="legend-dialog__left--text">2 = ..---</p>
+          <p class="legend-dialog__left--text">3 = ...--</p>
+        </div>
+        <div class="legend-dialog__right">
+          <p class="legend-dialog__right--text">4 = ....-</p>
+          <p class="legend-dialog__right--text">5 = .....</p>
+          <p class="legend-dialog__right--text">6 = -....</p>
+          <p class="legend-dialog__right--text">7 = --...</p>
+          <p class="legend-dialog__right--text">8 = ---..</p>
+          <p class="legend-dialog__right--text">9 = ----.</p>
+          <p class="legend-dialog__right--text">0 = -----</p>
+          <p class="legend-dialog__right--text">. = .-.-.-</p>
+          <p class="legend-dialog__right--text">, = --..--</p>
+          <p class="legend-dialog__right--text">? = ..--..</p>
+          <p class="legend-dialog__right--text">' = .----.</p>
+          <p class="legend-dialog__right--text">" = .-..-.</p>
+          <p class="legend-dialog__right--text">/ = -..-.</p>
+          <p class="legend-dialog__right--text">: = ---...</p>
+          <p class="legend-dialog__right--text">; = -.-.-.</p>
+          <p class="legend-dialog__right--text">! = -.-.--</p>
+          <p class="legend-dialog__right--text">@ = .--.-.</p>
+          <p class="legend-dialog__right--text">$ = ...-..-</p>
+          <p class="legend-dialog__right--text">& = .-...</p>
+          <p class="legend-dialog__right--text">( = -.--.</p>
+          <p class="legend-dialog__right--text">) = -.--.-</p>
+          <p class="legend-dialog__right--text">- = -....-</p>
+          <p class="legend-dialog__right--text">_ = ..--.-</p>
+          <p class="legend-dialog__right--text">= = -...-</p>
+          <p class="legend-dialog__right--text">+ = .-.-.</p>
+          <p class="legend-dialog__right--text">¿ = ..-..-</p>
+          <p class="legend-dialog__right--text">¡ = --...-</p>
+          <p class="legend-dialog__right--text">space = /</p>
+        </div>
+      </div>
+    </dialog>
   </body>
 </html>
