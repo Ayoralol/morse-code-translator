@@ -65,7 +65,7 @@ body {
   color: rgba(200, 200, 200, 0.5);
 }
 .wrapper .top__left__buttons {
-  width: 250px;
+  width: 280px;
   height: 24px;
   display: flex;
   justify-content: center;
@@ -73,13 +73,13 @@ body {
   flex-direction: column;
   justify-content: space-between;
   flex-direction: row;
-  font-size: 16px;
+  font-size: 14px;
   color: rgba(200, 200, 200, 0.5);
   cursor: default;
 }
 .wrapper .top__left__buttons__magic {
   background-color: rgb(60, 60, 60);
-  width: 120px;
+  width: 100px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -89,7 +89,7 @@ body {
 }
 .wrapper .top__left__buttons__legend {
   background-color: rgb(60, 60, 60);
-  width: 120px;
+  width: 160px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -159,7 +159,7 @@ body {
   color: rgba(200, 200, 200, 0.5);
 }
 .bot__left__buttons {
-  width: 250px;
+  width: 280px;
   height: 24px;
   display: flex;
   justify-content: center;
@@ -167,13 +167,13 @@ body {
   flex-direction: column;
   justify-content: space-between;
   flex-direction: row;
-  font-size: 16px;
+  font-size: 14px;
   color: rgba(200, 200, 200, 0.5);
   cursor: default;
 }
 .bot__left__buttons__magic {
   background-color: rgb(60, 60, 60);
-  width: 120px;
+  width: 100px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -183,7 +183,7 @@ body {
 }
 .bot__left__buttons__legend {
   background-color: rgb(60, 60, 60);
-  width: 120px;
+  width: 160px;
   height: 100%;
   display: flex;
   justify-content: center;
