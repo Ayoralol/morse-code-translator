@@ -59,24 +59,24 @@ body {
       color: rgba(200, 200, 200, 0.5);
     }
     &__buttons {
-      width: 250px;
+      width: 280px;
       height: 24px;
       @include flexCenter;
       justify-content: space-between;
       flex-direction: row;
-      font-size: 16px;
+      font-size: 14px;
       color: rgba(200, 200, 200, 0.5);
       cursor: default;
       &__magic {
         background-color: rgb(60, 60, 60);
-        width: 120px;
+        width: 100px;
         height: 100%;
         @include flexCenter;
         border-radius: 6px;
       }
       &__legend {
         background-color: rgb(60, 60, 60);
-        width: 120px;
+        width: 160px;
         height: 100%;
         @include flexCenter;
         border-radius: 6px;

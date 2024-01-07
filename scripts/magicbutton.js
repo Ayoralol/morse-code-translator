@@ -1,6 +1,7 @@
 import {translatorFunction} from "./translator.js";
 
 const btn = document.querySelector(".magic__btn");
+const btn2 = document.querySelector(".legend__btn");
 const swaps = document.querySelectorAll(".changer");
 const engOrMorse = document.querySelectorAll(".engormorse");
 const desc = document.querySelectorAll(".desc");
@@ -13,10 +14,12 @@ const input = document.querySelector(".translate");
 const outputs = document.querySelectorAll(".output");
 const normOutput = document.querySelector(".output__norm");
 const mainOutput = document.querySelector(".main__output");
+const legendHead = document.querySelector(".legend-dialog__head--text");
 
 btn.addEventListener("click", () => {
   btn.classList.toggle("active");
   btn.style.pointerEvents = "none";
+  btn2.style.pointerEvents = "none";
   swaps.forEach((swap) => (swap.style.opacity = "0"));
   setTimeout(() => {
     htmlSwapper();
@@ -24,6 +27,7 @@ btn.addEventListener("click", () => {
   }, 410);
   setTimeout(() => {
     btn.style.pointerEvents = "all";
+    btn2.style.pointerEvents = "all";
   }, 800);
 });
 
@@ -52,7 +56,7 @@ const changeToMorse = () => {
   foot2.forEach(
     (html) =>
       (html.innerHTML =
-        ". -. --. .-.. .. ... .... / -- ..- ... - / ... - .- .-. - / .-- .. - .... / .- / .-.. . - - . .-. / --- .-. / -. ..- -- -... . .-. --..--- / -- --- .-. ... . / -- ..- ... - / ... - .- .-. - / .-- .. - .... / .- / .-.-.- / --- .-. / -....-")
+        "... - .- .-. - / -- --- .-. ... . / .-- .. - .... / .- / .-.-.- / --- .-. / -....- / .- -. -.. / ... - .- .-. - / . -. --. .-.. .. ... .... / .-- .. - .... / .- -. -.-- / --- - .... . .-. / ...- .- .-.. .. -.. / -- --- .-. ... . / -.-. .... .- .-. .- -.-. - . .-.")
   );
   label.forEach(
     (html) =>
@@ -63,6 +67,8 @@ const changeToMorse = () => {
   legText.forEach(
     (html) => (html.innerHTML = "-- --- .-. ... . / .-.. . --. . -. -..")
   );
+  legendHead.innerHTML =
+    "...- .- .-.. .. -.. / -- --- .-. ... . / -.-. --- -.. . / -.-. .... .- .-. .- -.-. - . .-. ...";
 };
 
 const changeToEnglish = () => {
@@ -78,11 +84,12 @@ const changeToEnglish = () => {
   foot2.forEach(
     (html) =>
       (html.innerHTML =
-        "English must start with a letter or number, Morse must start with a . or -")
+        "Start Morse with a . or - and start English with any other valid Morse character")
   );
   label.forEach((html) => (html.innerHTML = "Enter English or Morse Code"));
   btnText.forEach((html) => (html.innerHTML = "Magic"));
   legText.forEach((html) => (html.innerHTML = "Morse Legend"));
+  legendHead.innerHTML = "Valid Morse Code Characters";
 };
 
 const swapInput = () => {
