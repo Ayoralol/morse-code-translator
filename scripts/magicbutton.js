@@ -1,4 +1,4 @@
-import {translatorFunction} from "./translator.js";
+import {translatorFunction} from "./translatorFunction.js";
 
 const btn = document.querySelector(".magic__btn");
 const btn2 = document.querySelector(".legend__btn");
