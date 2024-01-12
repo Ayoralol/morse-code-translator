@@ -1,9 +1,10 @@
-import {morseToEng} from "../scripts/morsetoeng.js";
-import {engToMorse} from "../scripts/engtomorse.js";
-import {langCheck} from "../scripts/langcheck.js";
+import {morseToEng} from "./morsetoeng.js";
+import {engToMorse} from "./engtomorse.js";
+import {langCheck} from "./langcheck.js";
 
-export const testTranslatorFunction = (value) => {
+export const translatorFunction = (value, normOutput = false) => {
   let inputValue = value.trim();
+  if (normOutput) normOutput.value = inputValue;
   let outputValue = "";
   if (!inputValue) {
     outputValue = "";

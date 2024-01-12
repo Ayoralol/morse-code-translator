@@ -1,4 +1,4 @@
-import {translatorFunction} from "./translator.js";
+import {translatorFunction} from "./translatorFunction.js";
 
 const btn = document.querySelector(".magic__btn");
 const swaps = document.querySelectorAll(".changer");
@@ -88,9 +88,6 @@ const changeToEnglish = () => {
 const swapInput = () => {
   let firstOutputValue = mainOutput.innerHTML;
   let swapInput = input.value;
-  console.log(firstOutputValue);
-  console.log(swapInput);
   input.value = firstOutputValue;
-  console.log(input.value);
   translatorFunction(firstOutputValue);
 };
