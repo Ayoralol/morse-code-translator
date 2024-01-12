@@ -95,9 +95,6 @@ const changeToEnglish = () => {
 const swapInput = () => {
   let firstOutputValue = mainOutput.innerHTML;
   let swapInput = input.value;
-  console.log(firstOutputValue);
-  console.log(swapInput);
   input.value = firstOutputValue;
-  console.log(input.value);
   translatorFunction(firstOutputValue);
 };
