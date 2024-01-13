@@ -22,3 +22,21 @@ export const langCheck = (str) => {
     return "Invalid Start Input";
   }
 };
+
+// throw new Error is okay for small projects but not for a team setting
+
+// class InvalidMorseCodeError extends Error {
+//   constructor() {
+//     super("Invalid Morse Code");
+//   }
+// }
+// class InvalidCharacterError extends Error() {
+//   constructor() {
+//     super("Invalid Morse Code");
+//   }
+// }
+// class InvalidMorseCodeError extends Error() {
+//   constructor() {
+//     super("Invalid Morse Code");
+//   }
+// }
